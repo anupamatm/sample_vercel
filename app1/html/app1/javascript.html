@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+</head>
+
+<body>
+
+    <button onclick="even()">even or odd</button><br>
+    <button onclick="amstrong()">armstrong number</button><br>
+    <button onclick="pali()">palindrome</button><br>
+    <button onclick="pri()">printing character</button><br><br>
+    <input type="text" name="" id="num1"><br>
+    <input type="text" name="" id="num2"><br>
+    <button onclick="add()">add</button>
+    <input type="text" name="" id="result">
+    <script>
+        
+
+
+
+        function add() {
+            a = Number(document.getElementById('num1').value)
+            b = Number(document.getElementById('num2').value)
+            c = a + b
+            document.getElementById('result').value = c
+        }
+
+
+
+
+        //********************* even or odd *************
+        function even() {
+            num = Number(prompt('enter anumber'))
+            if (num % 2 == 0) {
+                console.log('Even number')
+                document.write('even number')
+            }
+            else {
+                console.log('odd number')
+                document.write('odd number')
+            }
+        }
+        //******************end even or odd******************
+
+        // *******************amstrong number***************
+        function amstrong() {
+            num = Number(prompt('enter anumber'))
+            temp = num
+            sum = 0
+            while (num > 0) {
+                remainder = num % 10
+                console.log(remainder)
+                sum = sum + (remainder * remainder * remainder)
+                num = parseInt(num / 10)
+            }
+            if (temp == sum) {
+                document.write('armstrong  number')
+            }
+            else {
+                document.write(' not armstrong  number')
+            }
+
+        }
+        // *******************end amstrong number***************
+
+
+        // *******************palindrom or not ***************
+        function pali() {
+            num = Number(prompt('enter anumber'))
+            original = num
+            reversed = 0
+
+            while (num != 0) {
+                remainder = num % 10;
+                reversed = (reversed * 10) + remainder
+
+                num = parseInt(num / 10)
+            }
+            console.log(reversed)
+            if (original == reversed) {
+                document.write('is a palindrome')
+            }
+            else {
+                document.write(' is not a palindrome')
+            }
+
+        }
+        // *******************end palindrom or not***************
+
+
+        // *******************start printing ***************
+        function pri() {
+            n = 5
+            for (var i = 0; i <= n; i++) {
+                for (var j = 0; j <= n - i; j++) {
+                    document.write('-')
+
+                }
+                for (var K = 0; k <= i; k++) {
+                    document.write('*')
+
+                }
+           
+                document.write('<br>')
+            }
+            /*for(var i=5;i>=0;i--)
+            {
+               
+                for(var j=0;j<=i;j++)
+                {
+                    document.write('*')
+                }
+                document.write('<br>')
+                
+            }*/
+        }
+
+
+
+
+
+
+// *******************end printing***************
+    </script>
+
+
+</body>
+
+</html>
