@@ -1,7 +1,7 @@
 {
     "builds":[{
         "src":"sample/wsgi.py",
-        "use":"@vercel/python",
+        "use":"@ardnt/vercel-python-wsgi",
         "config":{"maxLamdaSise":"15mb","runtime":"python3.9"}
 
     }],
